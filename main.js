@@ -28,10 +28,9 @@ function playSound(pair) {
     const aulist = pair.map((e, i) => new Audio(paths[i]+e+".mp3"))
     aulist[0].play();
     getDuration(aulist[0].src, function(duration) {
-        console.log(duration);
         setTimeout(() => {
             aulist[1].play();
-        }, duration*1000-50);
+        }, duration*1000-55);
     })
 }
 
@@ -40,7 +39,9 @@ function playSound(pair) {
 $(function() {
 
     $("#play_sound").on("click", function() {
-        playSound(getRandomPair(parts));
+        const pair = getRandomPair(parts);
+        playSound(pair);
+        $("#sta-name").html(pair.join("").replace("2", ""));
     });
 
 })

@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>京葉線ランダム駅名ジェネレーター</title>
+    <script src="https://kit.fontawesome.com/cfd1cae778.js" crossorigin="anonymous"></script>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'rwd5cen',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
@@ -13,7 +24,12 @@
 </head>
 
 <body>
-    <button id="play_sound">PLAY</button>
+
+    <div class="wrapper">
+        <p id="sta-name">千葉みなと</p>
+        <a href="#" id="play_sound">再生成 <i class="fa-solid fa-dice-three"></i></a>
+    </div>
+
 </body>
 
 </html>
